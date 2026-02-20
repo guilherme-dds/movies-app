@@ -1,0 +1,12 @@
+.movie-preview {
+   padding: 40px 100px;
+}
+
+.movie-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
+   gap: 100px;
+   padding: 0;
+   list-style: none;
+}
+
