@@ -1,11 +1,17 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import './index.css';
 import axios from 'axios';
 import { Movie } from '@/types/movie';
 import { Params } from '@/types/params';
 import MovieCard from '../MovieCard';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import './index.css';
 
 export default function MovieList() {
     const [movies, setMovies] = useState<Movie[]>([]);
@@ -44,11 +50,26 @@ export default function MovieList() {
 
     return (
         <div className='movie-preview'>
-            <ul className="movie-list">
-                {movies.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie}/>
-                ))}
-            </ul>
+            <div className='main-films'>
+                <Swiper
+                modules={[Pagination]}
+                pagination={{ clickable: true }}
+                className="mySwiper"
+                spaceBetween={20}
+                slidesPerView={7}
+                breakpoints={{
+                    320: { slidesPerView: 2 },
+                    640: { slidesPerView: 3 },
+                    1024: { slidesPerView: 5 },
+                }}
+                >
+                    {movies.map((movie) => (
+                        <SwiperSlide key={movie.id}>
+                            <MovieCard key={movie.id} movie={movie}/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
             <div className='title-section'>
                 <h1>Ação</h1>
                 <div className='bar'></div>
