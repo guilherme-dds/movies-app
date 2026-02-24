@@ -4,28 +4,42 @@ import { useEffect, useState } from 'react';
 import './index.css';
 import axios from 'axios';
 import { Movie } from '@/types/movie';
+import { Params } from '@/types/params';
 import MovieCard from '../MovieCard';
 
 export default function MovieList() {
     const [movies, setMovies] = useState<Movie[]>([]);
+    const [actionMovies, setActionMovies] = useState<Movie[]>([]);
 
     const API_URL = "https://api.themoviedb.org/3/discover/movie"
+    const apiKey: string = process.env.NEXT_PUBLIC_TMDB_API_KEY!
 
-    const getMovies = () => {
+    const getMovies = (movieType: string) => {
+        let paramsInfo: Params = {
+            api_key: apiKey,
+            language: 'pt-BR',
+        }
+        
+        if(movieType == "action"){
+            paramsInfo.with_genres = 28;
+        }
+
         axios({
             method: 'get',
             url: API_URL,
-            params: {
-                api_key: process.env.NEXT_PUBLIC_TMDB_API_KEY,
-                language: 'pt-BR',
-            }
+            params: paramsInfo,
         }).then(response => {
-            setMovies(response.data.results);
+            if(movieType == "action"){
+                setActionMovies(response.data.results);
+            } else {
+                setMovies(response.data.results);
+            }
         })
     }
 
     useEffect(() => {
-        getMovies();
+        getMovies("action");
+        getMovies("")
     }, []);
 
     return (
@@ -33,6 +47,12 @@ export default function MovieList() {
             <ul className="movie-list">
                 {movies.map((movie) => (
                     <MovieCard key={movie.id} movie={movie}/>
+                ))}
+            </ul>
+            <h1>Ação</h1>
+            <ul className="movie-list">
+                {actionMovies.map((actionMovie) => (
+                    <MovieCard key={actionMovie.id} movie={actionMovie}/>
                 ))}
             </ul>
         </div>
