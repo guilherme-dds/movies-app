@@ -1,5 +1,8 @@
 .movie-preview {
    padding: 40px 100px;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
 }
 
 .movie-list {
@@ -9,4 +12,23 @@
    padding: 0;
    list-style: none;
 }
+
+.title-section {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+
+   h1 {
+      color: #fff;
+   }
+
+   .bar {
+      background-color: #fff;
+      height: 7px;
+      width: 100px;
+      border-radius: 17px;
+   }
+}
+
+
 

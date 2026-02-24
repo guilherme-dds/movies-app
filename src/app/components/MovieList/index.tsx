@@ -49,7 +49,10 @@ export default function MovieList() {
                     <MovieCard key={movie.id} movie={movie}/>
                 ))}
             </ul>
-            <h1>Ação</h1>
+            <div className='title-section'>
+                <h1>Ação</h1>
+                <div className='bar'></div>
+            </div>
             <ul className="movie-list">
                 {actionMovies.map((actionMovie) => (
                     <MovieCard key={actionMovie.id} movie={actionMovie}/>
