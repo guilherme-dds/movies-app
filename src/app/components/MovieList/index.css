@@ -38,3 +38,14 @@
   bottom: 0;
   z-index: 20;
 }
+
+.swiper-pagination-bullet {
+  background-color: #a1a1a1;
+  opacity: 1; 
+  height: 10px;
+  width: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}

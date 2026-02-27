@@ -56,7 +56,7 @@ export default function MovieList() {
                 pagination={{ clickable: true }}
                 className="mySwiper"
                 spaceBetween={20}
-                slidesPerView={7}
+                slidesPerView={6}
                 breakpoints={{
                     320: { slidesPerView: 2 },
                     640: { slidesPerView: 3 },
