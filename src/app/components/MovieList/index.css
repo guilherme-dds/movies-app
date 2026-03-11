@@ -2,7 +2,7 @@
    padding: 40px 100px;
    display: flex;
    flex-direction: column;
-   gap: 50px;
+   gap: 30px;
 }
 
 .movie-list {
@@ -17,6 +17,7 @@
    display: flex;
    flex-direction: column;
    gap: 5px;
+   padding-left: 60px;
 
    h1 {
       color: #fff;
@@ -31,7 +32,7 @@
 }
 
 .mySwiper {
-  padding: 60px;
+  padding: 45px 60px;
 }
 
 .mySwiper .swiper-pagination {

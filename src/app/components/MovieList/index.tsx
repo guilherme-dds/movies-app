@@ -74,11 +74,26 @@ export default function MovieList() {
                 <h1>Ação</h1>
                 <div className='bar'></div>
             </div>
-            <ul className="movie-list">
-                {actionMovies.map((actionMovie) => (
-                    <MovieCard key={actionMovie.id} movie={actionMovie}/>
-                ))}
-            </ul>
+            <div className="action-films">
+                <Swiper
+                modules={[Pagination]}
+                pagination={{ clickable: true }}
+                className="mySwiper"
+                spaceBetween={20}
+                slidesPerView={6}
+                breakpoints={{
+                    320: { slidesPerView: 2 },
+                    640: { slidesPerView: 3 },
+                    1024: { slidesPerView: 5 },
+                }}
+                >
+                    {actionMovies.map((actionMovie) => (
+                        <SwiperSlide key={actionMovie.id}>
+                            <MovieCard key={actionMovie.id} movie={actionMovie}/>
+                        </SwiperSlide>
+                    ))}
+                 </Swiper>
+            </div>
         </div>
     )
 }

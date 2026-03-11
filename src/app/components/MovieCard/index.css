@@ -33,6 +33,6 @@
 }
 
 .movie-card.active {
-  transform: scale(1.20);
+  transform: scale(1.10);
   z-index: 10;
 }
