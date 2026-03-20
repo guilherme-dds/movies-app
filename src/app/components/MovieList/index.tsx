@@ -56,11 +56,13 @@ export default function MovieList() {
                 pagination={{ clickable: true }}
                 className="mySwiper"
                 spaceBetween={20}
-                slidesPerView={6}
+                slidesPerView={7}
+                slidesPerGroup={7}
+                watchSlidesProgress={true}
                 breakpoints={{
-                    320: { slidesPerView: 2 },
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 5 },
+                    320: { slidesPerView: 2, slidesPerGroup: 2 },
+                    640: { slidesPerView: 3, slidesPerGroup: 3 },
+                    1024: { slidesPerView: 5, slidesPerGroup: 5 },
                 }}
                 >
                     {movies.map((movie) => (
@@ -80,11 +82,13 @@ export default function MovieList() {
                 pagination={{ clickable: true }}
                 className="mySwiper"
                 spaceBetween={20}
-                slidesPerView={6}
+                slidesPerView={7}
+                slidesPerGroup={7}
+                watchSlidesProgress={true}
                 breakpoints={{
-                    320: { slidesPerView: 2 },
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 5 },
+                    320: { slidesPerView: 2, slidesPerGroup: 2 },
+                    640: { slidesPerView: 3, slidesPerGroup: 3 },
+                    1024: { slidesPerView: 5, slidesPerGroup: 5 },
                 }}
                 >
                     {actionMovies.map((actionMovie) => (

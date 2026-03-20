@@ -1,8 +1,57 @@
 .navbar {
-    background-color: #0f172a;
-    padding: 12px 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1E1E1E;
+    padding: 12px 130px;
+    height: 120px;
 
     .page-title {
         color: #fff;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 500px;
+        height: 70px;
+        background-color: #0F0F0F;
+        border-radius: 12px;
+        border: 3px solid #2b2b2b;
+        color: #fff;
+
+        .movies-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1A1A1A;
+            height: 45px;
+            width: 120px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .shows-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            width: 120px;
+        }
+
+        .list-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            width: 120px;
+        }
+    }
+
+    .search-btn {
+        cursor: pointer;
     }
 }
