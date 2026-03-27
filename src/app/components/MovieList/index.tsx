@@ -52,18 +52,12 @@ export default function MovieList() {
         <div className='movie-preview'>
             <div className='main-films'>
                 <Swiper
-                modules={[Pagination]}
-                pagination={{ clickable: true }}
-                className="mySwiper"
-                spaceBetween={10}
-                slidesPerView={7}
-                slidesPerGroup={7}
-                watchSlidesProgress={true}
-                breakpoints={{
-                    320: { slidesPerView: 2, slidesPerGroup: 2 },
-                    640: { slidesPerView: 3, slidesPerGroup: 3 },
-                    1024: { slidesPerView: 5, slidesPerGroup: 5 },
-                }}
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    className="mySwiper"
+                    spaceBetween={40}
+                    slidesPerView="auto"
+                    centeredSlides={false}
                 >
                     {movies.map((movie) => (
                         <SwiperSlide key={movie.id}>

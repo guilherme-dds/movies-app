@@ -52,3 +52,6 @@
 .swiper-pagination-bullet-active {
   background-color: var(--white);
 }
+.swiper-slide {
+  width: 180px; /* ou o tamanho do seu card */
+}
