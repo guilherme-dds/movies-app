@@ -3,12 +3,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: #1E1E1E;
+    background-color: var(--black-08);
     padding: 12px 130px;
     height: 120px;
 
     .page-title {
-        color: #fff;
+        color: var(--white);
     }
 
     ul {
@@ -18,16 +18,16 @@
         align-items: center;
         width: 500px;
         height: 60px;
-        background-color: #0F0F0F;
+        background-color: var(--black-06);
         border-radius: 12px;
-        border: 3px solid #2b2b2b;
-        color: #fff;
+        border: 3px solid var(--black-12);
+        color: var(--white);
 
         .active-nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #1A1A1A;
+            background-color: var(--black-10);
             height: 40px;
             width: 120px;
             border-radius: 10px;
