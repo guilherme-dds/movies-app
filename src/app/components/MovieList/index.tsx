@@ -55,7 +55,7 @@ export default function MovieList() {
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
                 className="mySwiper"
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerView={7}
                 slidesPerGroup={7}
                 watchSlidesProgress={true}
@@ -81,7 +81,7 @@ export default function MovieList() {
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
                 className="mySwiper"
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerView={7}
                 slidesPerGroup={7}
                 watchSlidesProgress={true}
