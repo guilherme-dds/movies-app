@@ -101,7 +101,7 @@ export default function Home() {
         <div className={styles.genresRow}>
           <div className={styles.genresSection}>
             {actionMovies.map((actionMovie) => (
-              <img src={`${IMAGE_BASE_URL}${actionMovie.poster_path}`} alt="" />
+              <img src={`${IMAGE_BASE_URL}${actionMovie.poster_path}`} key={actionMovie.id} alt="" />
             ))}
           </div>
           <div className={styles.genresSection}></div>
