@@ -108,6 +108,8 @@
 
 .genres {
   position: relative;
+  display: flex;
+  align-items: center;
   margin: 0px 130px;
   margin-top: 50px;
   height: 400px;
@@ -176,6 +178,26 @@
   color: var(--white);
   cursor: pointer;
   border: 2px solid var(--black-12);
+}
+
+.genresRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+}
+
+.genresSection {
+  width: 170px;
+  height: 210px;
+  border-radius: 10px;
+  background-color: var(--black-10);
+}
+
+.genresSection img {
+  height: 60px;
 }
 
 @media (min-width: 768px) {
