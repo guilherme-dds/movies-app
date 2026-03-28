@@ -192,6 +192,7 @@
   height: 270px;
   border-radius: 10px;
   background-color: var(--black-10);
+  border: 1px solid var(--black-15);
 }
 
 .imageGrid {
