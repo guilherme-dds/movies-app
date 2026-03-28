@@ -1,6 +1,6 @@
 import MovieList from "./components/MovieList";
 import styles from "./page.module.css";
-import { FaPlay, FaPlus } from "react-icons/fa";
+import { FaPlay, FaPlus, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { AiOutlineLike } from "react-icons/ai";
 
 export default function Home() {
@@ -28,6 +28,22 @@ export default function Home() {
             </button>
           </div>
         </div>
+
+        <div className={styles.pagination}>
+          <div className={styles.arrow}>
+            <FaArrowLeft />
+          </div>
+          <div className={styles.itemsPagination}>
+            <div className={styles.paginationOn}></div>
+            <div className={styles.paginationOff}></div>
+            <div className={styles.paginationOff}></div>
+            <div className={styles.paginationOff}></div>
+          </div>
+          <div className={styles.arrow}>
+            <FaArrowRight />
+          </div>
+        </div>
+
         <img
           src="/avengers-endgame-banner.png"
           style={{ borderRadius: "20px" }}
